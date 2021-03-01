@@ -1,1 +1,1 @@
-Hello
+# 20xx-proposal-template
