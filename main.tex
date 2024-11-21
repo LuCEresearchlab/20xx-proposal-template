@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{si-msc-proposal}
+
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{subcaption}
+\usepackage{xcolor}
+
+\hypersetup{
+  colorlinks=true,
+  citecolor=black,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=black,
+}
+
+\author{FirstName LastName}
+
+\title{Mandatory descriptive title}
+
+% \subtitle{Optional subtitle}
+
+\abstract{
+  The abstract should fit all on this page, if it does not then it's too long and not an abstract anymore.
+}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+\tableofcontents
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MAIN BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\subsection{Structure of the document}
+
+\section{Background and Related Work}\label{sec:bg-rw}
+
+\section{Thesis Goals and Timeline}\label{sec:tg}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{example.png}
+\caption{Example figure}
+\label{fig:example}
+\end{figure}
+
+\section{Work plan}\label{sec:wp}
+
+The development of the project is divided into three different main steps as
+follows:
+
+\begin{enumerate}
+  \item Item A
+    \begin{enumerate}
+      \item Item A.A
+      \item Item A.B
+      \item Item A.C
+    \end{enumerate}
+  \item Item B
+    \begin{enumerate}
+      \item Item B.A
+      \item Item B.B
+    \end{enumerate}
+  \item Item C
+    \begin{enumerate}
+      \item Item C.A
+      \item Item C.B
+    \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[ht]
+\centering
+\makebox[\textwidth]{
+  \begin{ganttchart}[
+    Mile1/.style={milestone/.append style={fill=red}},
+    x unit=1mm,
+    time slot format=isodate,
+    y unit title=20,
+    title height=.9,
+    bar height=0.2,
+    y unit chart=15,
+  ]{2025-02-01}{2025-06-15}
+  \gantttitlecalendar{year, month=shortname} \\
+
+  \ganttgroup{Group A} {2025-02-03}{2025-03-15} \\
+    \ganttbar{Item A.A}{2025-02-15}{2025-02-27} \\
+    \ganttbar{Item A.B}{2025-03-01}{2025-03-15} \\
+    \ganttbar{Item A.C}{2025-03-01}{2025-03-15} \\
+
+  \ganttgroup{Group B} {2025-03-16}{2025-03-30} \\
+    \ganttbar{Item B.A}{2025-03-16}{2025-03-22} \\
+    \ganttbar{Item B.B}{2025-03-23}{2025-03-30} \\
+
+  \ganttgroup{Group C} {2025-03-31}{2025-04-30} \\
+    \ganttbar{Item C.A}{2025-03-31}{2025-04-15} \\
+    \ganttbar{Item C.B}{2025-04-16}{2025-04-30} \\
+
+  \ganttgroup{Validation}{2025-05-01}{2025-05-15} \\
+
+  \ganttgroup{Report}{2025-02-15}{2025-6-15} \\
+  \end{ganttchart}
+}
+\caption{Timeline}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{luce}
+
+\end{document}

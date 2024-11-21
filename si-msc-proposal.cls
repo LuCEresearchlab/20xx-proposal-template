@@ -26,6 +26,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{xifthen}
 \RequirePackage{lipsum}
+\RequirePackage{pgfgantt}
+\RequirePackage{tikz}
 
 %\RequirePackage{listings}
 
@@ -192,4 +194,3 @@
 %%% put ToC, LoF, LoT and Index entries in the ToC use of \phantomsection is required for dealing with the hyperref package and depends on the nohyper option
 
 %%% other useful packages
-
